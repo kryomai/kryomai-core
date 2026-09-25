@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.3] - Compute Capabilities
+## [0.1.4] - Compute Capabilities
 
 ### Added
 
