@@ -5,8 +5,8 @@ from __future__ import annotations
 import platform
 import subprocess
 
-from kryomai.core.device import ComputeDevice
 from kryomai.compute.registry import ComputeRegistry
+from kryomai.core.device import ComputeDevice
 
 
 class HardwareDiscovery:

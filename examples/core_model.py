@@ -1,9 +1,9 @@
 from kryomai.core import (
-    Task,
     ComputeCapability,
     ComputeDevice,
     Execution,
     ExecutionResult,
+    Task,
 )
 
 

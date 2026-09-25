@@ -1,6 +1,6 @@
 from kryomai.compute.discovery import HardwareDiscovery
-from kryomai.core.device import ComputeDevice
 from kryomai.compute.registry import ComputeRegistry
+from kryomai.core.device import ComputeDevice
 
 
 def test_discover_cpu():

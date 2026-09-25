@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
-from datetime import datetime, UTC
+from datetime import datetime
 from uuid import UUID, uuid4
 
-from .task import Task
 from .device import ComputeDevice
+from .task import Task
 
 
 @dataclass
