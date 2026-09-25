@@ -1,9 +1,12 @@
 from kryomai.core import (
+    CapabilityRequirement,
     ComputeCapability,
     ComputeDevice,
+    ComputeType,
     Execution,
     ExecutionResult,
     Task,
+    TaskRequirements,
 )
 
 
@@ -39,3 +42,21 @@ def test_core_system_model():
     assert device.device_type == "CPU"
     assert execution.status == "pending"
     assert result.success is True
+
+
+def test_task_with_requirements():
+    task = Task(
+        name="ML Task",
+        description="Machine learning workload",
+        requirements=TaskRequirements(
+            capabilities=[
+                CapabilityRequirement("machine_learning"),
+            ],
+            preferred_device_types=[ComputeType.GPU],
+            priority=10,
+        ),
+    )
+
+    assert task.requirements.priority == 10
+    assert task.requirements.preferred_device_types == ["GPU"]
+    assert task.requirements.capabilities[0].name == "machine_learning"

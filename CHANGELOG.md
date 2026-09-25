@@ -2,6 +2,46 @@
 
 All notable changes to KryomAI Core are documented here.
 
+
+## [0.2.0] - Task Requirements & Compute Type Foundation
+
+### Added
+
+- Added `ComputeType` enumeration for heterogeneous compute categories.
+- Added `TaskRequirements` for describing task-level compute requirements.
+- Added `CapabilityRequirement` for required and optional capabilities.
+- Added `ResourceRequirements` for CPU, system memory, and GPU memory requirements.
+- Added validation for capability names.
+- Added validation for resource requirements.
+- Added validation for preferred compute device types.
+- Added validation for task priority.
+- Added comprehensive requirements test coverage.
+
+### Changed
+
+- Updated `ComputeDevice.device_type` to use `ComputeType`.
+- Updated hardware discovery to use typed compute categories.
+- Updated `Task` to include `TaskRequirements`.
+- Updated core exports for new requirements and compute type abstractions.
+
+### Architecture
+
+Introduced the first structured task-requirements layer for future compute matching and heterogeneous compute orchestration.
+
+The requirements architecture now provides the foundation for:
+
+- Capability-aware compute matching
+- Compute-type preferences
+- Resource-aware scheduling
+- Future heterogeneous compute selection
+- Future CPU, GPU, NPU, FPGA, QPU, HPU, HPC, and robotics backends
+
+### Validation
+
+- Ruff: all checks passed
+- Pytest: 44 tests passed
+
+
 ## [0.1.5] - Foundation Cleanup & Engineering Hardening
 
 ### Added

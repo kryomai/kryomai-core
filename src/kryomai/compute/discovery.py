@@ -6,6 +6,7 @@ import platform
 import subprocess
 
 from kryomai.compute.registry import ComputeRegistry
+from kryomai.core.compute_type import ComputeType
 from kryomai.core.device import ComputeDevice
 
 
@@ -22,7 +23,7 @@ class HardwareDiscovery:
 
         return ComputeDevice(
             name=cpu_name,
-            device_type="CPU",
+            device_type=ComputeType.CPU,
             capabilities=[
                 "general_computation",
                 "data_processing",
@@ -60,7 +61,7 @@ class HardwareDiscovery:
                 devices.append(
                     ComputeDevice(
                         name=name,
-                        device_type="GPU",
+                        device_type=ComputeType.GPU,
                         capabilities=[
                             "parallel_computation",
                             "machine_learning",
