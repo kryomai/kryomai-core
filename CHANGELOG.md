@@ -1,25 +1,101 @@
-Changelog
-[0.1.5] - Hardware Discovery
-Added
-Added HardwareDiscovery for automatic hardware detection.
-Added CPU discovery.
-Added GPU discovery for Windows systems.
-Added automatic conversion of discovered hardware into ComputeDevice objects.
-Added hardware discovery integration with ComputeRegistry.
-Added discover_and_register() for automatic device registration.
-Added hardware discovery tests.
-Added registry integration tests.
-Added hardware discovery example.
-Architecture
-Introduced the hardware discovery layer:
-Hardware
-↓
-Hardware Discovery
-↓
-ComputeDevice
-↓
-Compute Registry
-Verification
-9 tests passing.
-CPU successfully detected on Windows.
-GPU discovery gracefully handles systems without a GPU.
+# Changelog
+
+All notable changes to KryomAI Core are documented here.
+
+## [0.1.5] - Foundation Cleanup & Engineering Hardening
+
+### Added
+
+- Standardized project version to `0.1.5`
+- Added Ruff configuration for code quality and import ordering
+- Added pytest configuration
+- Added development dependencies
+- Improved project metadata and development tooling configuration
+
+### Changed
+
+- Cleaned and standardized Python imports
+- Removed unused imports
+- Standardized `__all__` ordering
+- Improved development configuration in `pyproject.toml`
+
+### Engineering
+
+- Established Ruff as the code-quality baseline
+- Established automated pytest regression testing
+- Confirmed all existing tests pass after code-quality changes
+
+### Validation
+
+- Ruff: all checks passed
+- Pytest: 9 tests passed
+
+---
+
+## [0.1.4] - Compute Capabilities
+
+### Added
+
+- Added capability support to `ComputeDevice`
+- Added capability-based device discovery
+- Added `ComputeRegistry.find_by_capability()`
+- Added tests for capability matching
+- Updated compute registry example
+
+### Architecture
+
+Introduced the foundational domain concept of compute capabilities.
+
+A compute device can now expose capabilities that describe the types of computation it supports.
+
+Example capabilities include:
+
+- `general_computation`
+- `data_processing`
+- `parallel_computation`
+- `machine_learning`
+- `tensor_computation`
+
+This establishes the foundation for future capability-aware compute selection.
+
+---
+
+## [0.1.3]
+
+### Added
+
+- Initial compute registry functionality
+- Device registration
+- Device lookup
+- Device listing
+- Device removal
+
+---
+
+## [0.1.2]
+
+### Added
+
+- Execution model
+- Execution result model
+- Task and device relationships
+
+---
+
+## [0.1.1]
+
+### Added
+
+- Core task model
+- Compute device model
+- Initial project structure
+
+---
+
+## [0.1.0]
+
+### Added
+
+- Initial KryomAI Core foundation
+- Python package structure
+- Basic project metadata
