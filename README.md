@@ -25,7 +25,7 @@ Current Status
 
 KryomAI Core is currently in the foundational development stage.
 
-Version: "0.1.0"
+Version: "0.1.5"
 
 The current objective is to establish the software architecture, core abstractions, testing infrastructure, and development foundations required for future versions.
 

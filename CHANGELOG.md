@@ -1,5 +1,5 @@
 Changelog
-[0.1.4] - Hardware Discovery
+[0.1.5] - Hardware Discovery
 Added
 Added HardwareDiscovery for automatic hardware detection.
 Added CPU discovery.
